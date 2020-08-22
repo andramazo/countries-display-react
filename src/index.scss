@@ -1,3 +1,6 @@
+
+@import "./CSS/global_vars.scss";
+
 html {
   height: 100%;
 }
@@ -20,7 +23,7 @@ body {
 *{
   box-sizing: border-box;
   padding: 0;
-  font-size: 24px;
+  font-family: $app_font_family;
 }
 
 code {

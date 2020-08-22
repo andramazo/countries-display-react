@@ -1,0 +1,70 @@
+@import "../../CSS/global_vars.scss";
+
+.Toolbar {
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    box-sizing: border-box;
+    z-index: 90;
+    box-shadow: $themeboxshadow;
+}
+
+/* 
+.Toolbar nav {
+    height: 100%;
+    display: grid;
+} */
+
+.buttonBold{
+    border: none;
+    background: none;
+    font-size: $detailpage_font_size;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    font-weight: $small_font_weight;
+    .fa-moon{
+        margin-right: 0.5rem;
+    }
+}
+
+.Logo {
+    font-weight: $large_font_weight;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: $detailpage_font_size;
+}
+
+.Logo a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: $tablet_size) {
+    .Toolbar {
+        padding: 0 0.90rem;
+    }
+}
+
+@media (max-width: $mobile_size) {
+    .buttonBold{
+        font-size: $homepage_font_size;
+        font-weight: $small_font_weight;
+    }
+    .Toolbar {
+        padding: 0 1rem;
+    }
+    .Logo {
+        padding: 0rem;
+        font-size: $homepage_font_size;
+    }
+}

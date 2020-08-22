@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,800;1,600&display=swap');
+
+/*Light theme variables*/
+$light_background : hsl(0, 0%, 98%);
+$light_text_element : hsl(0, 0%, 100%);
+$light_input : hsl(0, 0%, 52%);
+$light_text_color: hsl(200, 15%, 8%);
+
+/*Dark theme variables*/
+$dark_background : hsl(207, 26%, 17%);
+$dark_element: hsl(209, 23%, 22%);
+
+/*Common styles*/
+$darktext_lightelement : hsl(0, 0%, 100%);
+
+/*Font styles*/
+$homepage_font_size : 14px;
+$detailpage_font_size: 16px;
+$theme_font_size_mobile: 12px;
+$app_font_family: 'Nunito Sans', 'Times New Roman';
+$small_font_weight : 300;
+$medium_font_weight : 600;
+$large_font_weight : 800;
+
+$mobile_size: 375px;
+$tablet_size: 800px;
+$desktop_size: 1440px;
+
+$themeboxshadow :  0px 5px 3px 0px rgba(0, 0, 0, 0.15);
+
+
+
+
+
+

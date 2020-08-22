@@ -1,0 +1,14 @@
+@import "../CSS/global_vars.scss";
+
+
+.lighttheme{
+    background-color: $light_background;
+    color: $light_text_color;
+}
+
+.lightthemeEle{
+    background-color: $darktext_lightelement;
+    *{
+        color: $light_text_color;
+    }
+}
