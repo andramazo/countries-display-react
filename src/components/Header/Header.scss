@@ -3,7 +3,6 @@
 .Toolbar {
     height: 5rem;
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     display: flex;
@@ -11,8 +10,8 @@
     align-items: center;
     padding: 0 4rem;
     box-sizing: border-box;
-    z-index: 90;
     box-shadow: $themeboxshadow;
+    z-index: 90;
 }
 
 /* 
@@ -31,6 +30,10 @@
     cursor: pointer;
     outline: none;
     font-weight: $small_font_weight;
+    transition: $theme_transition_effect;
+    &:hover{
+      transform: $theme_transition_effect_transform;
+    }
     .fa-moon{
         margin-right: 0.5rem;
     }
@@ -40,7 +43,6 @@
     font-weight: $large_font_weight;
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 5px;
     font-size: $detailpage_font_size;
 }
 

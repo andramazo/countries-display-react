@@ -1,0 +1,18 @@
+@import "../../CSS/global_vars.scss";
+
+.Site-content{
+    display: block;
+    padding: 1.5rem 4.5rem;
+}
+
+@media (max-width: $tablet_size) {
+    .Site-content{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: $mobile_size) {
+    .Site-content{
+        padding: 1.5rem 1rem;
+    }
+}

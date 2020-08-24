@@ -1,0 +1,32 @@
+
+@import "../../CSS/global_vars.scss";
+
+.card-list-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    > div{
+        margin: 2rem;
+    }
+}
+
+@media (max-width: $desktop_size) and (min-width: 800px) {
+    .card-list-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        > div{
+            margin: 2rem;
+        }
+    }
+}
+
+@media (max-width: $tablet_size) {
+    .card-list-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        > div{
+            margin: 1rem;
+        }
+    }
+}

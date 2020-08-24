@@ -1,0 +1,49 @@
+
+@import "../../../CSS/global_vars.scss";
+
+.card{
+  text-align: left;
+  max-width: 300px;
+  box-shadow: $cardboxshadow;
+  border-radius: $theme_border_radius;
+  cursor: pointer;
+  transition: $theme_transition_effect;
+  &:hover{
+    transform: $theme_transition_effect_transform;
+  }
+  .imgContainer{
+    background-position: center !important;
+    background-size: cover !important;
+    width: 300px;
+    height: 200px;
+    border-radius: $theme_image_border_radius;
+  }
+}
+
+.card-body{
+  padding: 2rem;
+  > h4{
+    font-size: $theme_name_font_size;
+    font-weight: $large_font_weight;
+  }
+  
+  > div{
+    padding: 0.10rem;
+    font-size: $detailpage_font_size;
+    span{
+      font-size: $homepage_font_size;
+    }
+  }
+}
+
+@media (max-width: $tablet_size) {
+  .card{
+    max-width: 250px;
+    .imgContainer{
+      width: 250px;
+      height: 150px;
+    }
+  }
+}
+
+

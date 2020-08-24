@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 
-function App() {
+const CountryList = React.lazy(() => {
+  return import('./components/CountryList/CountryList');
+});
+
+const CountryDetails = React.lazy(() => {
+  return import('./components/CountryDetails/CountryDetails');
+});
+
+
+const  App = (props) => {
 
   const [darktheme, setdarktheme] = useState(false)
 
@@ -13,19 +23,25 @@ function App() {
     setdarktheme(!darktheme);
   }
 
+  let routes = (
+    <Switch>
+      <Route path="/country/:countryname/:countrycode?" render={props => <CountryDetails darktheme={darktheme} {...props} />}/>
+      <Route path="/" exact render={props => <CountryList darktheme={darktheme} {...props}/>} />
+      <Redirect to="/" />
+    </Switch>
+  );
+
   return (
-    <div className="App Site">
-            <div className="Sitecontent">
-              <div className="App-header"> 
-                  <Header  onthemechange={themeChangeHandler} darkmode={darktheme}/>
-              </div>
-              <div className="main">
-              {/*   <Main /> */}
-              </div>
-            </div>
-            <Footer darkmode={darktheme}/>
+    <div className="Site">
+      <Header  onthemechange={themeChangeHandler} darkmode={darktheme}/>
+      <Main className="Site-content" darkmode={darktheme}>
+        <Suspense fallback={<p>Loading...</p>}>
+              {routes}
+        </Suspense>
+      </Main>
+      <Footer darkmode={darktheme}/>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

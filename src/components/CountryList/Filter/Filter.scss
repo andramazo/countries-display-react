@@ -1,0 +1,95 @@
+@import "../../../CSS/global_vars.scss";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+.filterContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+
+    > div:first-child{
+        border-radius: $theme_border_radius;
+        height: 50px;
+        box-shadow: $themeboxshadow;
+        width: 455px; 
+        display: flex;
+        align-items: center;
+        svg {
+            font-size: $detailpage_font_size;
+            margin: 0 1.5rem;
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            height: 100%;
+            width: 100%;
+            font-size: $detailpage_font_size;
+        }
+    }
+
+    > div:nth-child(2){
+        position: relative;
+        /*Don't really need this just for demo styling*/
+        &:after{
+            content: '\f078';
+            font: normal normal normal 17px/1 FontAwesome;
+            top: 40%;
+            right: 7%;
+            position: absolute;
+            pointer-events: none;
+        }
+        select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;            
+            border: none;
+            outline: none;
+            border-radius: $theme_border_radius;
+            height: 55px;
+            box-shadow: $themeboxshadow;
+            width: 300px; 
+            padding: 1rem 1rem;
+            line-height: 1;
+            font-size: $detailpage_font_size;
+            word-break: normal;
+        }
+        select::-ms-expand {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: $tablet_size) {
+    .filterContainer{
+        flex-direction: column;
+        padding: 2rem 0;
+        > div:first-child{
+            width: 350px;
+        }
+        > div:nth-child(2){
+            margin-top: 2rem;
+            width: 250px;
+            select{
+                width: 250px;
+            }
+        }
+     }
+}
+
+@media (max-width: $mobile_size) {
+    .filterContainer{
+       flex-direction: column;
+       padding: 2rem 0;
+       > div:first-child{
+           width: 300px;
+       }
+       > div:nth-child(2){
+           margin-top: 10px;
+           select{
+               width: 250px;
+           }
+       }
+    }
+}
