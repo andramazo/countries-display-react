@@ -58,6 +58,10 @@
             box-shadow:  $themebackbuttonshadow;
             font-size: $homepage_font_size;
             margin: 0 1.5rem 1.5rem 0;
+            transition: $theme_transition_effect;
+            &:hover{
+              transform: $theme_transition_effect_transform;
+            }
         }
     }
 }

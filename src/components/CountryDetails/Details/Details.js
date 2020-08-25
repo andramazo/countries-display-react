@@ -8,11 +8,11 @@ const Details = props => {
     let dark_theme = ["darktheme"];
     let currencies = props.currencies.map(cur => cur.code);
     let languages = props.languages.map(cur => cur.name);
-    let element_style = ["lightthemeEle"];
+    let element_style = [...light_theme,"lightthemeEle"];
 
     if(props.darkmode){
         details_container = [...details_container,...dark_theme];
-        element_style = ["darkthemeEle"];
+        element_style = [...dark_theme,"darkthemeEle"];
     }else{
         details_container = [...details_container,...light_theme];
     }

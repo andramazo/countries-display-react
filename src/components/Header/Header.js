@@ -22,10 +22,10 @@ const Header = props => {
 
   if(props.darkmode){
     header_style = [...header_style,...dark_theme];
-    theme_button_class = [...theme_button_class,...dark_theme];
+    //theme_button_class = [...theme_button_class,...dark_theme];
   }else{
     header_style = [...header_style,...light_theme];
-    theme_button_class = [...theme_button_class,...light_theme];
+    //theme_button_class = [...theme_button_class,...light_theme];
   }
 
   return(
@@ -33,7 +33,7 @@ const Header = props => {
       <div className="Logo">
         <Link to="/">Where in the world?</Link>
       </div>
-      <nav className="navstyle DesktopOnly">
+      <nav className="navstyle">
         <button className={theme_button_class.join(' ')} onClick={props.onthemechange}>{ !props.darkmode ? 
                     (<><FontAwesomeIcon icon={['far', 'moon']} /> Dark Mode</>) 
                     : (<><FontAwesomeIcon icon={['fas', 'moon']} />Light Mode</>) }

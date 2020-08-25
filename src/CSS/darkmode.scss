@@ -1,6 +1,5 @@
 @import "../CSS/global_vars.scss";
 
-
 .darktheme{
     background-color: $dark_background;
     color: $darktext_lightelement;
@@ -8,7 +7,6 @@
 
 .darkthemeEle{
     background-color: $dark_element;
-    color: $darktext_lightelement;
     *{
         color:$darktext_lightelement;
     }
@@ -18,8 +16,5 @@
     select {
         color: $darktext_lightelement !important;
         background-color: $dark_element;
-    }
-    button{
-        color: $darktext_lightelement !important;
     }
 }
