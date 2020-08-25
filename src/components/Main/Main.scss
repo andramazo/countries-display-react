@@ -3,6 +3,7 @@
 .Site-content{
     display: block;
     padding: 1.5rem 4.5rem;
+    flex-grow: 1;
 }
 
 @media (max-width: $tablet_size) {

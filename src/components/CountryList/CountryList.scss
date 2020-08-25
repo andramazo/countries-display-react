@@ -11,6 +11,18 @@
     }
 }
 
+.notFoundContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p{
+        top: 10;
+        font-size: $theme_name_font_size;
+        font-weight: $medium_font_weight;
+        text-align: center;
+    }
+}
+
 @media (max-width: $desktop_size) and (min-width: 800px) {
     .card-list-container{
         display: grid;

@@ -8,6 +8,7 @@
 
 .darkthemeEle{
     background-color: $dark_element;
+    color: $darktext_lightelement;
     *{
         color:$darktext_lightelement;
     }
@@ -17,5 +18,8 @@
     select {
         color: $darktext_lightelement !important;
         background-color: $dark_element;
+    }
+    button{
+        color: $darktext_lightelement !important;
     }
 }

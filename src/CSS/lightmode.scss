@@ -8,7 +8,11 @@
 
 .lightthemeEle{
     background-color: $darktext_lightelement;
+    color: $light_text_color;
     *{
         color: $light_text_color;
+    }
+    button{
+        color: $light_text_color !important;
     }
 }

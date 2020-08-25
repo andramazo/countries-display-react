@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './CountryList.scss';
-import Card from './Card/Card';
 import Filter from './Filter/Filter';
 import axios from 'axios';
+import Card from './Card/Card';
 
+//This component is used for displaying the list of the countries
 const CountryList = props => {
-
     const select_continent_options = ["Africa","Americas","Asia","Europe","Oceania"];
     const [filter_continent,set_filter_continent] = useState('');
     const [search_input,set_search_input] = useState('');
@@ -13,23 +13,19 @@ const CountryList = props => {
     const [filtered_countries,set_filtered_countries] = useState([]);
     let inputRef = useRef();
     let selectRef = useRef();
-
     
+    //Fetches the data from the rest api
     const fetchdata = useCallback(() =>{
         axios.get('https://restcountries.eu/rest/v2/all')
         .then(res=>{
-            let country_list = res.data.map((country,i)=>{
-                return {flag: country.flag ,name: country.name, 
-                        region: country.region, population: country.population, 
-                        capital: country.capital, cioc: country.cioc }
-            })
-            set_list_of_countries(country_list);
-            set_filtered_countries(country_list);                
+            set_list_of_countries(res.data);
+            set_filtered_countries(res.data);                
         }).catch((err)=>{
             console.log(err)
         })
     },[]);
 
+    //Filter the country based on the provided input or dropdown
     const call_countries_api = useCallback(() =>{
         let filtered_country = list_of_countries;
         if(search_input){
@@ -70,26 +66,24 @@ const CountryList = props => {
         set_filter_continent(e.target.value)
     }
 
-    const selectCountryHandler = (countrycode,name) =>{
-        console.log(countrycode)
-        console.log(name)
-        console.log(props)
-        props.history.push('/country/'+ name + '/' + countrycode);
+    //Called when specific country is selected
+    const selectCountryHandler = (countryname) =>{
+        props.history.push('/country/'+ countryname);
     }
 
-    let card_display = (<p>Nothing to display for now</p>);
+    let card_display = (<div className="notFoundContainer"><p>Oops! unable to find the country you are looking for.</p></div>);
+    //Display the list of countries
     if(filtered_countries.length > 0){
         card_display = filtered_countries.map((ctr,i)=>{
-            return <Card key={i} {...ctr} clicked={()=>selectCountryHandler(ctr.cioc,ctr.name)} />
+            return <Card key={i} {...ctr} clicked={()=>selectCountryHandler(ctr.name)} />
         })
+        card_display = (<div className="card-list-container">{card_display}</div>)
     }
 
     return (
         <React.Fragment>
            <Filter ipref={inputRef} selectRef={selectRef} darkmode={props.darkmode} onchange={searchInputHandler} onContinentChange={continentSelectHandler} select_continent_options={select_continent_options}/>
-           <div className="card-list-container">
             {card_display}
-           </div>
         </React.Fragment>
     );
     

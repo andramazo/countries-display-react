@@ -1,0 +1,14 @@
+
+@import "../../CSS/global_vars.scss";
+
+.notFoundContContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p{
+        top: 10;
+        font-size: $theme_name_font_size;
+        font-weight: $medium_font_weight;
+        text-align: center;
+    }
+}

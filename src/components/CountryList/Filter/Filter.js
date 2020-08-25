@@ -3,7 +3,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import './Filter.scss';
 
-
+//Filter to look up for the desire country
+//There are two filters here- input search by country name or by selecting the regions
 const Filter = props => {
     let filter_container = ["filterContainer"];
     let element_style = ["lightthemeEle"];
@@ -20,7 +21,6 @@ const Filter = props => {
         return (<option key={i} value={d}>{d}</option>)
     }))
 
-
     return (
         <div className={filter_container.join(' ')}>
             <div className={element_style.join(' ')}>
@@ -35,8 +35,7 @@ const Filter = props => {
                 </label>
             </div>
         </div>
-    );
-    
+    );    
 }
 
 export default Filter;

@@ -13,24 +13,30 @@ const CountryDetails = React.lazy(() => {
   return import('./components/CountryDetails/CountryDetails');
 });
 
-
+/**
+ * This is the main component for the application 
+ * We are using two routes - Countrylist and second one is details for the country  
+ */
 const  App = (props) => {
 
+  //Need to set the state for changing the theme color
   const [darktheme, setdarktheme] = useState(false)
 
-  //Switch the them
+  //Switch the theme to dark or light
   const themeChangeHandler = () =>{
     setdarktheme(!darktheme);
   }
 
+  //Two routers to display the required information
   let routes = (
     <Switch>
-      <Route path="/country/:countryname/:countrycode?" render={props => <CountryDetails darktheme={darktheme} {...props} />}/>
-      <Route path="/" exact render={props => <CountryList darktheme={darktheme} {...props}/>} />
+      <Route path="/country/:countryname" render={props => <CountryDetails darkmode={darktheme} {...props} />}/>
+      <Route path="/" exact render={props => <CountryList darkmode={darktheme} {...props}/>} />
       <Redirect to="/" />
     </Switch>
   );
 
+  //Router component will be displayed inside the Main component
   return (
     <div className="Site">
       <Header  onthemechange={themeChangeHandler} darkmode={darktheme}/>

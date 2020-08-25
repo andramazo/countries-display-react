@@ -1,7 +1,7 @@
 import React from 'react';
 import './Main.scss';
 
-
+//Displays the child component passed from the route
 const Main = props => {
     let main_style = ["Site-content"];
     let light_theme = ["lighttheme"];
@@ -16,7 +16,6 @@ const Main = props => {
     return (
         <main className={main_style.join(' ')} >
             {props.children}
-            {/* <CountryList darkmode={props.darkmode}/>            */}
         </main>
     );
     

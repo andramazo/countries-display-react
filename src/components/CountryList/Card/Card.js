@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.scss';
 
-
+//DIsplays the country card
 const Card = props => {
     return (
         <div className="card" onClick={props.clicked}>
@@ -14,8 +14,7 @@ const Card = props => {
                 <div>Capital: <span>{props.capital}</span></div>
             </div>
         </div>
-    );
-    
+    );    
 }
 
 export default Card;
