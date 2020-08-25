@@ -1,18 +1,17 @@
 ## REST Countries API with color theme switcher using HTML, React.js, SCSS and axios
 
-## Available Scripts
+##Front-end style is taken from - https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
 
-In the project directory, you can run:
+## Stack
+* HTML
+* CSS
+    * SASS
+    * grid
+* React.js
+    * axios - to fetch the openweather api endpoints
 
-### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-## Solution
+## Live Demo
 https://andramazo.com
 
 
