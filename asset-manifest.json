@@ -2,7 +2,7 @@
   "files": {
     "static/js/0.db56c03d.chunk.js": "/countries-display-react/static/js/0.db56c03d.chunk.js",
     "main.css": "/countries-display-react/static/css/main.0f983260.chunk.css",
-    "main.js": "/countries-display-react/static/js/main.c28ef113.chunk.js",
+    "main.js": "/countries-display-react/static/js/main.a255460b.chunk.js",
     "runtime-main.js": "/countries-display-react/static/js/runtime-main.5d070392.js",
     "static/js/3.b6219c3b.chunk.js": "/countries-display-react/static/js/3.b6219c3b.chunk.js",
     "static/css/4.303a66fb.chunk.css": "/countries-display-react/static/css/4.303a66fb.chunk.css",
@@ -10,7 +10,7 @@
     "static/css/5.ecaa32d9.chunk.css": "/countries-display-react/static/css/5.ecaa32d9.chunk.css",
     "static/js/5.dacb4f02.chunk.js": "/countries-display-react/static/js/5.dacb4f02.chunk.js",
     "index.html": "/countries-display-react/index.html",
-    "precache-manifest.534abc440f4da7880401a7adc9e05fd4.js": "/countries-display-react/precache-manifest.534abc440f4da7880401a7adc9e05fd4.js",
+    "precache-manifest.57653bc53f3c5b01bab393c317e7016f.js": "/countries-display-react/precache-manifest.57653bc53f3c5b01bab393c317e7016f.js",
     "service-worker.js": "/countries-display-react/service-worker.js",
     "static/js/3.b6219c3b.chunk.js.LICENSE.txt": "/countries-display-react/static/js/3.b6219c3b.chunk.js.LICENSE.txt"
   },
@@ -18,6 +18,6 @@
     "static/js/runtime-main.5d070392.js",
     "static/js/3.b6219c3b.chunk.js",
     "static/css/main.0f983260.chunk.css",
-    "static/js/main.c28ef113.chunk.js"
+    "static/js/main.a255460b.chunk.js"
   ]
 }
