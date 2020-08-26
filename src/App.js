@@ -27,7 +27,7 @@ const  App = (props) => {
     setdarktheme(!darktheme);
   }
 
-  const rootPage = "/";
+  const rootPage = process.env.NODE_ENV === "development" ? "/" : "/countries-display-react/";
 
   //Two routers to display the required information
   let routes = (
