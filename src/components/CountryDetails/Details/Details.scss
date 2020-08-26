@@ -44,9 +44,10 @@
     }
     > div{
         display: flex;
-        align-items: center;
+        // align-items: center;
         margin-left: 1rem;
-        justify-content: space-between;
+        // justify-content: space-between;
+        flex-wrap: wrap;
         button{
             font-weight: $small_font_weight;
             cursor: pointer;
