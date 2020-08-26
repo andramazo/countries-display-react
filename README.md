@@ -10,7 +10,7 @@
 * React.js
     * axios - to fetch the openweather api endpoints
   
- ## Deployed the web application on git
+ #Deployed the web application on git
 
 
 ## Live Demo
