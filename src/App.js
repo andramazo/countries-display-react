@@ -27,12 +27,14 @@ const  App = (props) => {
     setdarktheme(!darktheme);
   }
 
+  const rootPage = process.env.NODE_ENV === "development" ? "/" : "/countries-display-react/";
+
   //Two routers to display the required information
   let routes = (
     <Switch>
-      <Route path="/country/:countryname" render={props => <CountryDetails darkmode={darktheme} {...props} />}/>
-      <Route path="/" exact render={props => <CountryList darkmode={darktheme} {...props}/>} />
-      <Redirect to="/" />
+      <Route path={`${rootPage}country/:countryname`} render={props => <CountryDetails darkmode={darktheme} {...props} />}/>
+      <Route path={rootPage} exact render={props => <CountryList darkmode={darktheme} {...props}/>} />
+      <Redirect to={rootPage} />
     </Switch>
   );
 
