@@ -1,0 +1,23 @@
+{
+  "files": {
+    "static/js/0.db56c03d.chunk.js": "/countries-display-react/static/js/0.db56c03d.chunk.js",
+    "main.css": "/countries-display-react/static/css/main.0f983260.chunk.css",
+    "main.js": "/countries-display-react/static/js/main.c28ef113.chunk.js",
+    "runtime-main.js": "/countries-display-react/static/js/runtime-main.b37d6494.js",
+    "static/js/3.b6219c3b.chunk.js": "/countries-display-react/static/js/3.b6219c3b.chunk.js",
+    "static/css/4.303a66fb.chunk.css": "/countries-display-react/static/css/4.303a66fb.chunk.css",
+    "static/js/4.117c9ab1.chunk.js": "/countries-display-react/static/js/4.117c9ab1.chunk.js",
+    "static/css/5.3d991527.chunk.css": "/countries-display-react/static/css/5.3d991527.chunk.css",
+    "static/js/5.dacb4f02.chunk.js": "/countries-display-react/static/js/5.dacb4f02.chunk.js",
+    "index.html": "/countries-display-react/index.html",
+    "precache-manifest.863db6cca5cb78cd6ac48c28e1dcc874.js": "/countries-display-react/precache-manifest.863db6cca5cb78cd6ac48c28e1dcc874.js",
+    "service-worker.js": "/countries-display-react/service-worker.js",
+    "static/js/3.b6219c3b.chunk.js.LICENSE.txt": "/countries-display-react/static/js/3.b6219c3b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b37d6494.js",
+    "static/js/3.b6219c3b.chunk.js",
+    "static/css/main.0f983260.chunk.css",
+    "static/js/main.c28ef113.chunk.js"
+  ]
+}
