@@ -9,10 +9,12 @@
     * grid
 * React.js
     * axios - to fetch the openweather api endpoints
+  
+ ## Deployed the web application on git
 
 
 ## Live Demo
-https://andramazo.com
+https://andramazo.github.io/countries-display-react/
 
 
 
