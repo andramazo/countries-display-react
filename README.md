@@ -9,8 +9,9 @@
     * grid
 * React.js
     * axios - to fetch the openweather api endpoints
+* REST APi end points - https://restcountries.eu/
   
- #Deployed the web application on git
+ Deployed the web application on git
 
 
 ## Live Demo
